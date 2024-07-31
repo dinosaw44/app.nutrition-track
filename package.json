@@ -1,10 +1,7 @@
 {
   "private": true,
-  "config": {
-    "react": 7357
-  },
   "scripts": {
-    "dev": "conc npm:dev:ui \"next dev\"",
+    "dev": "next dev",
     "dev:ui": "LE=react MODE=dev bun run --filter @dinosaw44/ui storybook:config --no-open",
     "build": "next build",
     "start": "next start",
@@ -13,20 +10,36 @@
   "workspaces": [
     "packages/ui"
   ],
+  "msw": {
+    "workerDirectory": "public"
+  },
   "dependencies": {
     "@dinosaw44/ui": "workspace:*",
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
+    "@ngneat/falso": "^7.2.0",
+    "clsx": "^2.1.1",
+    "fuzzy-search": "^3.2.1",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-minimal-pie-chart": "^8.4.0"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.0",
+    "@types/bun": "latest",
+    "@types/fuzzy-search": "^2.1.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "concurrently": "^8.2.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
+    "msw": "1.1",
+    "ts-extras": "^0.12.0",
     "typescript": "^5"
-  }
+  },
+  "name": "app.nutrition-track",
+  "module": "index.ts",
+  "type": "module"
 }

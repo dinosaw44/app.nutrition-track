@@ -1,3 +1,5 @@
+@import "./style/index.css";
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;

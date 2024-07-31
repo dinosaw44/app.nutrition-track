@@ -1,0 +1,5 @@
+.container {
+    display: grid;
+    gap: .5rem;
+    list-style: none;
+}

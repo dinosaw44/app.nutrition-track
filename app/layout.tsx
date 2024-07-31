@@ -4,7 +4,9 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const runtime = "edge";
+export const runtime = process.env.NODE_ENV === 'development'
+  ? (await import("@/mocks"), 'nodejs')
+  : 'edge'
 
 export const metadata: Metadata = {
   title: "Create Next App",

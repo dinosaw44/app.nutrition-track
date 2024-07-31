@@ -1,0 +1,8 @@
+input {
+    flex: auto;
+    padding: .5rem;
+}
+
+input[name=q] + button {
+    border-radius: 0 !important;
+}
